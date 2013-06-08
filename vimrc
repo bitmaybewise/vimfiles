@@ -9,7 +9,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-vividchalk.git'
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-endwise.git'
-Bundle 'Lokaltog/powerline'
+Bundle 'Lokaltog/powerline', { 'rtp': 'powerline/bindings/vim' }
 Bundle 'scrooloose/syntastic'
 Bundle 'mattn/zencoding-vim'
 " ...
@@ -67,6 +67,8 @@ inoremap " ""<Left>
 inoremap ' ''<Left>
 inoremap < <><Left>
 
-if has("gui_gtk2")
-  set guifont=Monospace\ 11
-endif
+"powerline
+set laststatus=2
+set t_Co=256
+let g:Powerline_symbols = "fancy"
+set guifont=Menlo\ for\ Powerline\ 11
