@@ -12,6 +12,7 @@ Bundle 'tpope/vim-endwise.git'
 Bundle 'Lokaltog/powerline', { 'rtp': 'powerline/bindings/vim' }
 Bundle 'scrooloose/syntastic'
 Bundle 'mattn/zencoding-vim'
+Bundle 'pangloss/vim-javascript'
 " ...
 " Brief help
 " :BundleList          - list configured bundles
@@ -72,3 +73,8 @@ set laststatus=2
 set t_Co=256
 let g:Powerline_symbols = "fancy"
 set guifont=Menlo\ for\ Powerline\ 11
+
+"html indentation
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1  = "inc"
