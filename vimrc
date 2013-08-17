@@ -10,9 +10,11 @@ Bundle 'tpope/vim-vividchalk.git'
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-endwise.git'
 Bundle 'Lokaltog/powerline', { 'rtp': 'powerline/bindings/vim' }
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic'
 Bundle 'mattn/zencoding-vim'
 Bundle 'pangloss/vim-javascript'
+Bundle 'lunaru/vim-less'
+Bundle 'plasticboy/vim-markdown'
 " ...
 " Brief help
 " :BundleList          - list configured bundles
@@ -78,3 +80,7 @@ set guifont=Menlo\ for\ Powerline\ 11
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1  = "inc"
+
+"markdown
+let g:vim_markdown_folding_disable=1
+
