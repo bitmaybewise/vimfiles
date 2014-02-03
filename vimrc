@@ -18,6 +18,7 @@ Bundle 'cakebaker/scss-syntax.vim'
 "Bundle 'plasticboy/vim-markdown'
 Bundle 'vim-scripts/zoom.vim'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'thoughtbot/vim-rspec'
 " ...
 " Brief help
 " :BundleList          - list configured bundles
@@ -87,3 +88,8 @@ let g:airline_powerline_fonts = 1
 "markdown
 let g:vim_markdown_folding_disable=1
 
+"RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
