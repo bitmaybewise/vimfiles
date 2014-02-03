@@ -9,12 +9,15 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-vividchalk.git'
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-endwise.git'
-Bundle 'bling/vim-airline'''
+Bundle 'bling/vim-airline'
 "Bundle 'scrooloose/syntastic'
 Bundle 'mattn/emmet-vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'lunaru/vim-less'
-Bundle 'plasticboy/vim-markdown'
+Bundle 'cakebaker/scss-syntax.vim'
+"Bundle 'plasticboy/vim-markdown'
+Bundle 'vim-scripts/zoom.vim'
+Bundle 'altercation/vim-colors-solarized'
 " ...
 " Brief help
 " :BundleList          - list configured bundles
@@ -25,15 +28,20 @@ Bundle 'plasticboy/vim-markdown'
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
 
-colorscheme vividchalk
+syntax on
+"colorscheme vividchalk
+colorscheme solarized
+let g:solarized_termcolors=256
+
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
 
 set nocompatible
 filetype off
-
-"required!
 filetype plugin indent on
-syntax on
-
 set nowrap
 set nobackup
 set nowritebackup
@@ -73,7 +81,7 @@ inoremap < <><Left>
 "airline
 set laststatus=2
 set t_Co=256
-set guifont=Menlo\ for\ Powerline\ 11
+set guifont=Menlo\ for\ Powerline\ 10
 let g:airline_powerline_fonts = 1
 
 "markdown
