@@ -7,18 +7,16 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here:
 Bundle 'tpope/vim-vividchalk.git'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'mattn/emmet-vim'
+Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-endwise.git'
 Bundle 'bling/vim-airline'
-"Bundle 'scrooloose/syntastic'
-Bundle 'mattn/emmet-vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'lunaru/vim-less'
 Bundle 'cakebaker/scss-syntax.vim'
-"Bundle 'plasticboy/vim-markdown'
 Bundle 'vim-scripts/zoom.vim'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'thoughtbot/vim-rspec'
 " ...
 " Brief help
 " :BundleList          - list configured bundles
@@ -42,7 +40,6 @@ endif
 
 set nocompatible
 filetype off
-filetype plugin indent on
 set nowrap
 set nobackup
 set nowritebackup
@@ -59,11 +56,13 @@ set encoding=utf8
 set fileencoding=utf8
 
 "indent settings
+filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
+autocmd FileType haskell setlocal shiftwidth=4 softtabstop=4
 
 "key mapping for window navigation
 map <C-h> <C-w>h
