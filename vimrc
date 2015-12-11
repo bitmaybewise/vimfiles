@@ -1,94 +1,66 @@
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-" My Bundles here:
-Bundle 'tpope/vim-vividchalk.git'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'mattn/emmet-vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-endwise.git'
-Bundle 'bling/vim-airline'
-Bundle 'pangloss/vim-javascript'
-Bundle 'lunaru/vim-less'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'vim-scripts/zoom.vim'
-" ...
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-rails.git'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-endwise'
+Plugin 'bling/vim-airline'
+Plugin 'godlygeek/tabular'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'sheerun/vim-polyglot'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+" Put your non-Plugin stuff after this line
 
 syntax on
-"colorscheme vividchalk
-colorscheme solarized
-let g:solarized_termcolors=256
+color dracula
 
-if has('gui_running')
-  set background=light
-else
-  set background=dark
-endif
-
-set nocompatible
-filetype off
 set nowrap
 set nobackup
 set nowritebackup
 set noswapfile
 set number
-set autowrite
-set showcmd
-set hlsearch
 set cursorline
-set ruler
-
-"encoding
+set hlsearch
 set encoding=utf8
 set fileencoding=utf8
-
-"indent settings
-filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
-autocmd FileType haskell setlocal shiftwidth=4 softtabstop=4
 
-"key mapping for window navigation
+" key mapping for window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-"pair completion
-inoremap ( ()<Left>
-inoremap [ []<Left>
-inoremap { {}<Left>
-inoremap " ""<Left>
-inoremap ' ''<Left>
-inoremap < <><Left>
-
-"airline
+" airline
 set laststatus=2
 set t_Co=256
 set guifont=Menlo\ for\ Powerline\ 10
-let g:airline_powerline_fonts = 1
-
-"markdown
-let g:vim_markdown_folding_disable=1
-
-"RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+let g:airline_powerline_fonts=1
