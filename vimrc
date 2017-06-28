@@ -19,6 +19,7 @@ Plugin 'bling/vim-airline'
 Plugin 'godlygeek/tabular'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'pablobender/vim-mrspec'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -62,5 +63,5 @@ map <C-l> <C-w>l
 " airline
 set laststatus=2
 set t_Co=256
-set guifont=Menlo\ for\ Powerline\ 10
+set guifont=Hack\ 11
 let g:airline_powerline_fonts=1
