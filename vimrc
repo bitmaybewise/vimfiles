@@ -12,14 +12,11 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'dracula/vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'tpope/vim-rails.git'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-endwise'
-Plugin 'bling/vim-airline'
 Plugin 'godlygeek/tabular'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'pablobender/vim-mrspec'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,8 +57,3 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" airline
-set laststatus=2
-set t_Co=256
-set guifont=Hack\ 11
-let g:airline_powerline_fonts=1
